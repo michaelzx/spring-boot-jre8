@@ -4,4 +4,4 @@ if  [ ! -n "$word" ] ;then
 else
     echo "the word you input is $word"
 fi
-exec java -Djava.security.egd=file:/dev/./urandom -jar /www/$APP_NAME --spring.profiles.active=$PROFILES_ACTIVE
+exec java -Djava.security.egd=file:/dev/./urandom $JAVA_OPTS -jar /www/$APP_NAME --spring.profiles.active=$PROFILES_ACTIVE
